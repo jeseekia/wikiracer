@@ -46,7 +46,7 @@ class WikiGraph(object):
         # if current topic is found in the opposing topic's visited,
         # then path exists and must be traced back on both sides to return
         if cur in dest_cf:
-            print(is_source)
+            # print(is_source)
             path1 = self.find_path(came_from, cur)
             path2 = self.find_path(dest_cf, cur)
 
@@ -60,6 +60,7 @@ class WikiGraph(object):
                 path2.pop()
                 path2.extend(path1)
                 print(path2)
+                print("The shortest path " + str(len(path2)))
 
             # print(path1)
             sys.exit(0)
