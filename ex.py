@@ -32,7 +32,9 @@ def trycall(e):
     for i in testarray:
         #print(i)
         box_text += str(i) + ", "
-    popupmessage(box_text[0 : len(box_text) - 2])
+    box_text = box_text[0 : len(box_text) - 2]
+    box_text += "\n Total Number of Clicks is: " + str(len(testarray) - 1)
+    popupmessage(box_text)
 
 def popupmessage(path):
     popup = Tk()
